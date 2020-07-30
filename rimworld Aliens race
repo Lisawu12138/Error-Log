@@ -1,0 +1,22 @@
+Error in static constructor of AlienRace.HarmonyPatches: System.TypeInitializationException: The type initializer for 'AlienRace.HarmonyPatches' threw an exception. ---> System.InvalidCastException: Specified cast is not valid.
+  at HarmonyLib.PatchInfoSerialization.Deserialize (System.Byte[] bytes) [0x0001d] in <20181e2d55204880a56a9120ef04a53d>:0 
+  at HarmonyLib.HarmonySharedState.GetPatchInfo (System.Reflection.MethodBase method) [0x00011] in <20181e2d55204880a56a9120ef04a53d>:0 
+  at HarmonyLib.PatchProcessor.GetPatchInfo (System.Reflection.MethodBase method) [0x00010] in <20181e2d55204880a56a9120ef04a53d>:0 
+  at HarmonyLib.Harmony.GetPatchInfo (System.Reflection.MethodBase method) [0x00000] in <20181e2d55204880a56a9120ef04a53d>:0 
+  at HarmonyLib.Harmony.<GetPatchedMethods>b__18_0 (System.Reflection.MethodBase original) [0x00000] in <20181e2d55204880a56a9120ef04a53d>:0 
+  at System.Linq.Enumerable+WhereSelectEnumerableIterator`2[TSource,TResult].MoveNext () [0x00037] in <351e49e2a5bf4fd6beabb458ce2255f3>:0 
+  at System.Linq.Enumerable+SelectManySingleSelectorIterator`2[TSource,TResult].MoveNext () [0x00038] in <351e49e2a5bf4fd6beabb458ce2255f3>:0 
+  at System.Linq.Enumerable.Count[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x0003b] in <351e49e2a5bf4fd6beabb458ce2255f3>:0 
+  at AlienRace.HarmonyPatches..cctor () [0x015c7] in <e4225b55dbde460aab9746622a07111f>:0 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(intptr)
+  at System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor (System.RuntimeTypeHandle type) [0x0002a] in <567df3e0919241ba98db88bec4c6696f>:0 
+  at Verse.StaticConstructorOnStartupUtility.CallAll () [0x0001a] in <0ee2c524c4be441e9b7f8bfcb20aca6f>:0 
+Verse.Log:Error(String, Boolean)
+Verse.StaticConstructorOnStartupUtility:CallAll()
+Verse.<>c:<DoPlayLoad>b__4_2()
+Verse.LongEventHandler:ExecuteToExecuteWhenFinished()
+Verse.LongEventHandler:UpdateCurrentAsynchronousEvent()
+Verse.LongEventHandler:LongEventsUpdate(Boolean&)
+Verse.Root:Verse.Root.Update_Patch1(Root)
+Verse.Root_Entry:Update()
